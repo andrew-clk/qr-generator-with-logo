@@ -51,10 +51,13 @@ const TRANSLATIONS = {
     "medium": "Medium",
     "large": "Large"
   }
-};
+} as const;
 
-const locale = 'en-US'; // Simplified for now
-const t = (key: string) => TRANSLATIONS[locale]?.[key] || key;
+type TranslationKey = keyof typeof TRANSLATIONS['en-US'];
+type LocaleKey = keyof typeof TRANSLATIONS;
+
+const locale: LocaleKey = 'en-US';
+const t = (key: TranslationKey): string => TRANSLATIONS[locale][key];
 
 interface ContactInfo {
   firstName: string;
