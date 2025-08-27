@@ -129,7 +129,7 @@ const QRGenerator: React.FC = () => {
       qrContainerRef.current.appendChild(canvas);
       
       // Generate QR code with high error correction for logo embedding
-      const qr = new (window as any).QRious({
+      const qr = new window.QRious({
         element: canvas,
         value: text,
         size: 800,

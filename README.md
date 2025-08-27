@@ -34,8 +34,8 @@ A modern, feature-rich QR code generator built with Next.js that allows you to c
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd qr-code-generator
+git clone https://github.com/andrew-clk/qr-generator-with-logo.git
+cd qr-generator-with-logo
 ```
 
 2. Install dependencies:
@@ -49,6 +49,13 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+npm run build
+npm start
+```
 
 ## Deployment to Vercel
 
