@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
           <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
             Privacy Policy
           </h1>
-          <p className="text-gray-600 mb-8">Last updated: August 28, 2024</p>
+          <p className="text-gray-600 mb-8">Last updated: August 23, 2025</p>
 
           <div className="prose max-w-none">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">1. Information We Collect</h2>
