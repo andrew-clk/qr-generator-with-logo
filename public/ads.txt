@@ -1,0 +1,14 @@
+# ads.txt file for QR Code Generator Malaysia
+# This file authorizes Google AdSense to serve ads on this domain
+# Format: domain.com, publisher_id, relationship, authority_id
+
+# Google AdSense
+google.com, pub-8525902031865618, DIRECT, f08c47fec0942fa0
+
+# Additional ad networks can be added here if needed
+# Example for other networks:
+# bing.com, pub-xxxxxxxxxx, DIRECT, xxxxxxxxxxxxxxxx
+# facebook.com, pub-xxxxxxxxxx, DIRECT, xxxxxxxxxxxxxxxx
+
+# Reseller relationships (if applicable)
+# google.com, pub-xxxxxxxxxx, RESELLER, f08c47fec0942fa0

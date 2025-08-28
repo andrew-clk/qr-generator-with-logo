@@ -760,6 +760,21 @@ END:VCARD`;
 
         <div className="text-center mt-8 text-gray-500 text-sm">
           <p>{t('footerText')}</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <a 
+              href="/privacy-policy" 
+              className="text-gray-500 hover:text-purple-600 transition-colors duration-200"
+            >
+              Privacy Policy
+            </a>
+            <span className="text-gray-300">•</span>
+            <a 
+              href="/terms-of-service" 
+              className="text-gray-500 hover:text-purple-600 transition-colors duration-200"
+            >
+              Terms of Service
+            </a>
+          </div>
         </div>
       </div>
     </div>
