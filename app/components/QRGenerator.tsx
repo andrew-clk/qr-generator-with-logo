@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { QrCode, Link, MessageSquare, User, Download, Copy, Check, Upload, X } from 'lucide-react';
+import AdSenseWrapper from './AdSenseWrapper';
 
 const TRANSLATIONS = {
   "en-US": {
@@ -457,6 +458,7 @@ END:VCARD`;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 p-4">
+      <AdSenseWrapper />
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
