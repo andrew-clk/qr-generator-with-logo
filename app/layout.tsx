@@ -2,7 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -91,18 +95,16 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="QR Generator MY" />
         
         {/* Favicon and Icons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="manifest" href="/site.webmanifest" />
         
-        {/* Preconnect to External Domains for Performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+        {/* Preconnect to Critical External Domains */}
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         
-        {/* Structured Data for AIO/AI Search */}
+        {/* Optimized Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -110,42 +112,15 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebApplication",
               "name": "QR Code Generator Malaysia",
-              "description": "Free online QR code generator with custom logo support for Malaysian businesses",
+              "description": "Free QR code generator with logo support",
               "url": "https://your-domain.com",
               "applicationCategory": "BusinessApplication",
-              "operatingSystem": "Web Browser",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "MYR"
               },
-              "provider": {
-                "@type": "Person",
-                "name": "Andrew C."
-              },
-              "featureList": [
-                "Custom Logo QR Codes",
-                "URL QR Codes",
-                "Text QR Codes", 
-                "vCard Contact QR Codes",
-                "High Resolution Download",
-                "No Registration Required"
-              ],
-              "screenshot": "https://your-domain.com/og-image.png",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "150"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "3.1390",
-                "longitude": "101.6869"
-              },
-              "areaServed": {
-                "@type": "Country",
-                "name": "Malaysia"
-              }
+              "areaServed": "Malaysia"
             })
           }}
         />
@@ -172,10 +147,6 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <script
-          src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
-          defer
-        />
       </body>
     </html>
   )

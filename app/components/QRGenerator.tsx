@@ -90,7 +90,7 @@ const QRGenerator: React.FC = () => {
     url: ''
   });
 
-  // QR Code generation using QRious library via CDN
+  // QR Code generation with optimized lazy loading
   const generateQRCode = async (text: string) => {
     if (!text.trim()) {
       if (qrContainerRef.current) {
@@ -100,16 +100,23 @@ const QRGenerator: React.FC = () => {
     }
 
     try {
-      // Load QRious library dynamically
+      // Load QRious library only when needed (lazy loading)
       if (typeof window !== 'undefined' && !window.QRious) {
         const script = document.createElement('script');
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js';
+        script.async = true;
         script.onload = () => {
           createQR(text);
         };
+        script.onerror = () => {
+          console.warn('QRious failed to load, using fallback');
+          generateFallbackQR(text);
+        };
         document.head.appendChild(script);
-      } else {
+      } else if (window.QRious) {
         createQR(text);
+      } else {
+        generateFallbackQR(text);
       }
     } catch (error) {
       console.error('Error loading QR library:', error);
