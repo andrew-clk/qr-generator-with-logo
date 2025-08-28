@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { QrCode, Link, MessageSquare, User, Download, Copy, Check, Upload, X } from 'lucide-react';
+import AdSense from './AdSense';
 
 const TRANSLATIONS = {
   "en-US": {
@@ -695,6 +696,24 @@ END:VCARD`;
               {/* QR Code Display Section */}
               <div className="flex flex-col items-center space-y-6">
                 <h2 className="text-2xl font-semibold text-gray-800">{t('generatedQrCode')}</h2>
+                
+                {/* AdSense Corner Banner */}
+                <div className="w-full max-w-md mb-4">
+                  <AdSense
+                    adClient="ca-pub-XXXXXXXXXXXXXXXXX"
+                    adSlot="XXXXXXXXXX"
+                    adFormat="rectangle"
+                    className="flex justify-center"
+                    style={{
+                      width: '300px',
+                      height: '250px',
+                      margin: '0 auto',
+                      borderRadius: '12px',
+                      overflow: 'hidden',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                    }}
+                  />
+                </div>
                 
                 <div className="bg-gray-50 rounded-2xl p-8 w-full max-w-md">
                   {qrData ? (

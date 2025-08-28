@@ -13,6 +13,7 @@ A modern, feature-rich QR code generator built with Next.js that allows you to c
 - 📋 **Copy to Clipboard**: Quick data copying
 - 🌐 **Multilingual Support**: English and Spanish translations
 - 🔒 **Privacy-First**: No data stored on servers
+- 💰 **Monetization Ready**: Google AdSense integration
 
 ## Technologies Used
 
@@ -68,6 +69,14 @@ Or use the Vercel CLI:
 npm install -g vercel
 vercel
 ```
+
+## Monetization Setup
+
+This project includes Google AdSense integration for monetization. See [ADSENSE_SETUP.md](./ADSENSE_SETUP.md) for detailed instructions on:
+- Setting up Google AdSense account
+- Configuring ad placements
+- Replacing placeholder values with your AdSense codes
+- Revenue optimization tips
 
 ## API Endpoints
 
